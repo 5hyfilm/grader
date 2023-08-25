@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1692896493 source:/Users/waranthornchansawang/Documents/CU/DataStructure/d62_q1c_vector_intersection/main.cpp
+	<iostream>
+	<vector>
+	<map>
+	<algorithm>
+

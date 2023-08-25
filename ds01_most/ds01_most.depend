@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1692943571 source:/Users/waranthornchansawang/Documents/CU/grader/ds01_most/main.cpp
+	<iostream>
+	<map>
+	<algorithm>
+
