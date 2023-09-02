@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1693640269 source:/Users/waranthornchansawang/Documents/CU/grader/d63_q1a_hiatus/main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

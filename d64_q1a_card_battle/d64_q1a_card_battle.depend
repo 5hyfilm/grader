@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1693672671 source:/Users/waranthornchansawang/Documents/CU/grader/d64_q1a_card_battle/main.cpp
+	<iostream>
+	<map>
+	<algorithm>
+
