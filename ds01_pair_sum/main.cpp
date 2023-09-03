@@ -1,27 +1,49 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int main()
 {
-    int N, M;
-    cin >> N, M;
-    int arr[N], int want[M];
+    int N, M, n, m;
+    cin >> N >> M;
 
-    for (int i=0; i<N; i++) {
-        cin >> arr[i];
+    vector<int> v;
+
+    for (int i=0; i<N; i++)
+    {
+        cin >> n;
+        v.push_back(n);
     }
 
-    for (int i=0; i<M; i++) {
-        cin >> want[i];
-    }
+    for (int i=0; i<M; i++)
+    {
+        cin >> m;
+        bool found = false;
 
-    for (int i=0; i<N; i++) {
-        for (int j=i+1; j<N; j++) {
-            if (arr[i] + arr[j] == want[i]) {
-                cout << "YES";
+        for (auto it=v.begin(); it!=v.end(); it++)
+        {
+            int tmp = *it;
+            v.erase(it);
+
+            if (find(v.begin(), v.end(), m-tmp) != v.end())
+            {
+                found = true;
+                v.insert(it, tmp);
             }
             else
+            {
+                v.insert(it, tmp);
+            }
+        }
+        if (found == true)
+        {
+            cout << "YES" << '\n';
+        }
+        else
+        {
+            cout << "NO" << '\n';
         }
     }
 }

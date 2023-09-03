@@ -9,8 +9,10 @@ void member_multiply(vector<int> &v, vector<pair<vector<int>::iterator,int> > &m
     vector<int> tmp = v;
 
     sort(multiply.begin(), multiply.end());
-    for (int i = 0; i < multiply.size(); i++) {
-        for (int j = 0; j < multiply[i].second; j++) {
+    for (int i = 0; i < multiply.size(); i++)
+    {
+        for (int j = 0; j < multiply[i].second; j++)
+        {
             tmp.insert(multiply[i].first, multiply[i].second, *(multiply[i].first));
         }
     }
