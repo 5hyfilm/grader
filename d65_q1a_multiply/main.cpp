@@ -6,21 +6,35 @@ using namespace std;
 
 void member_multiply(vector<int> &v, vector<pair<vector<int>::iterator,int> > &multiply)
 {
-    vector<int> tmp = v;
 
     sort(multiply.begin(), multiply.end());
-    for (int i = 0; i < multiply.size(); i++)
+
+    vector<int> temp;
+    auto it = v.begin();
+
+    for (auto &x : multiply)
     {
-        for (int j = 0; j < multiply[i].second; j++)
+        while (it!=x.first)
         {
-            tmp.insert(multiply[i].first, multiply[i].second, *(multiply[i].first));
+            temp.push_back(*it);
+            it++;
         }
+
+        for (int i=0; i<x.second; i++)
+        {
+            temp.push_back(*(x.first));
+        }
+
     }
 
-    v = tmp;
+    while (it!=v.end())
+    {
+        temp.push_back(*it);
+        it++;
+    }
+
+    v = temp;
 }
-
-
 
 int main()
 {
