@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1694340367 source:/Users/waranthornchansawang/Documents/CU/grader/d65_q1a_delivery/main.cpp
+	<iostream>
+	<queue>
+	<vector>
+	<algorithm>
+
