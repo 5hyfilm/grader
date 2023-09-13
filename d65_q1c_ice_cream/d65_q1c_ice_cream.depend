@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1694596216 source:/Users/waranthornchansawang/Documents/CU/grader/d65_q1c_ice_cream/main.cpp
+	<iostream>
+	<map>
+	<vector>
+	<unordered_set>
+

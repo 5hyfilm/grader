@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -10,18 +11,16 @@ int main()
 
     int n, m, power, type;
     cin >> n >> m;
+    map<int, int> data;
+    vector<int> v(50001);
+
+    for (int i=0; i<=5000; i++) {
+        v[i] = 1;
+    }
 
 
 
-    while (n-- && n>0)
-    {
+    for (int i=0; i<n; i++) {
         cin >> power;
     }
-
-    while (n-- && n>0)
-    {
-        cin >> type;
-    }
-
-
 }
