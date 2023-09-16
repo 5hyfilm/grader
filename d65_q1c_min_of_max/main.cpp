@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <queue>
 
 using namespace std;
 
@@ -12,9 +13,9 @@ int main()
     int n, m, power, type;
     cin >> n >> m;
     map<int, int> data;
-    vector<int> v(50001);
+    vector<int> v(50000);
 
-    for (int i=0; i<=5000; i++) {
+    for (int i=0; i<=v.size(); i++) {
         v[i] = 1;
     }
 

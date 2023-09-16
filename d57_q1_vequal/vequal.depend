@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1424527993 source:/Users/waranthornchansawang/Documents/CU/grader/d57_q1_vequal/main.cpp
+	<stdexcept>
+	<iostream>
+	"vector.h"
+	"student.h"
+
+1425051986 /Users/waranthornchansawang/Documents/CU/grader/d57_q1_vequal/vector.h
+	<stdexcept>
+	<iostream>
+
+1694888127 /Users/waranthornchansawang/Documents/CU/grader/d57_q1_vequal/student.h
+
