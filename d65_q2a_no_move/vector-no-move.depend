@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1665304566 source:/Users/waranthornchansawang/Documents/CU/grader/d65_q2a_no_move/main.cpp
+	<stdexcept>
+	<iostream>
+	"vector-nm.h"
+	"student.h"
+
+1695126748 /Users/waranthornchansawang/Documents/CU/grader/d65_q2a_no_move/vector-nm.h
+	<stdexcept>
+	<iostream>
+	<vector>
+
+1695127545 /Users/waranthornchansawang/Documents/CU/grader/d65_q2a_no_move/student.h
+	<algorithm>
+
