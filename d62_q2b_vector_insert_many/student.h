@@ -9,19 +9,21 @@ void CP::vector<T>::insert_many(CP::vector<std::pair<int,T> > data)
     //write your code here
     ensureCapacity(mSize+data.size());
     T *temp = new T[mCap]();
+
     std::map<int, int> m(data.begin(), data.end());
 
     for (int i=0; i<mSize; i++) {
         if(m.find(i) != m.end()){
-            temp.push_back(m[i]);
+            temp[i] = m[i];
         }
         else {
-            temp.push_back(mData[i]);
+            temp[i] = mData[i];
         }
     }
 
     delete[] mData;
     mData = temp;
+    mSize = mSize+data.size();
 
 }
 
