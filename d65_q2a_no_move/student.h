@@ -7,7 +7,7 @@ template <typename T>
 T& CP::vector_no_move<T>::operator[](int idx)
 {
     //your code here
-    auto it =
+    int target = upperbound(aux.begin(), aux.end(), idx)-aux.begin();
 
 }
 

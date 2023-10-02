@@ -1,27 +1,34 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
 int main()
 {
-    int N, M, x, y;
-    cin >> N >> M;
+    priority_queue<int> pq;
     vector<int> v;
+    v.push_back(3);
+    v.push_back(1);
+    v.push_back(6);
+    v.push_back(4);
+    v.push_back(3);
 
-    for (int i=0; i<N; i++) {
-        cin >> x;
-        v.push_back(x);
+    for (auto &x : v)
+    {
+        pq.push(-x);
+        //cout << -x << " ";
     }
 
-    for (int i=0; i<M; i++) {
-        cin >> y;
+    for (auto &x : v)
+    {
+        cout << x << " ";
+    }
 
-        if (find(v.begin(), v.end(), y-v[i]) != v.end()) {
-            cout << "YES" << endl;
-        }
-        else {
-            cout << "NO" << endl;
-        }
+    cout << endl;
+    while (!pq.empty())
+    {
+        cout << -pq.top() << " ";
+        pq.pop();
     }
 }

@@ -7,24 +7,28 @@ template <typename T>
 void CP::vector<T>::insert_many(CP::vector<std::pair<int,T> > data)
 {
     //write your code here
-    ensureCapacity(mSize+data.size());
-    T *temp = new T[mCap]();
+    CP::vector<T> temp;
+    std::map<int, T> m(data.begin(), data.end());
 
-    std::map<int, int> m(data.begin(), data.end());
-
-    for (int i=0; i<mSize; i++) {
-        if(m.find(i) != m.end()){
-            temp[i] = m[i];
+    for (int i=0; i<mSize; i++)
+    {
+        if(m.find(i) != m.end())
+        {
+            temp.push_back(m[i]);
         }
-        else {
-            temp[i] = mData[i];
+        temp.push_back(mData[i]);
+    }
+
+    for (auto &x : m)
+    {
+        if (x.first >= mSize)
+        {
+            temp.push_back(x.second);
         }
     }
 
-    delete[] mData;
-    mData = temp;
-    mSize = mSize+data.size();
-
+    *this = temp;
 }
 
 #endif
+

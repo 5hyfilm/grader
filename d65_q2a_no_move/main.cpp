@@ -40,4 +40,5 @@ int main() {
       std::cout << sum << "\n";
     }
 
+    debug();
 }
