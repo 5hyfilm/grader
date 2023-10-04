@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1696230776 source:c:\users\film\desktop\grader\d61_q1_ordered_set\main.cpp
+	<iostream>
+	"student.h"
+
+1696234354 c:\users\film\desktop\grader\d61_q1_ordered_set\student.h
+	<vector>
+	<algorithm>
+

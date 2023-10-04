@@ -1,5 +1,9 @@
+#ifndef _CP_VECTOR_INCLUDED_
+#define _CP_VECTOR_INCLUDED_
+
 #include <stdexcept>
 #include <iostream>
+//#pragma once
 
 namespace CP {
 
@@ -13,6 +17,8 @@ class vector
     T *mData;
     size_t mCap;
     size_t mSize;
+
+    size_t aCount,oCount,pCount,iCount;
 
     void rangeCheck(int n) {
       if (n < 0 || (size_t)n >= mSize) {
@@ -30,6 +36,13 @@ class vector
       mCap = capacity;
     }
 
+    void ensureCapacity(size_t capacity) {
+      if (capacity > mCap) {
+        size_t s = (capacity > 2 * mCap) ? capacity : 2 * mCap;
+        expand(s);
+      }
+    }
+
   public:
     //-------------- constructor & copy operator ----------
 
@@ -41,6 +54,7 @@ class vector
       for (size_t i = 0;i < a.size();i++) {
         mData[i] = a[i];
       }
+      aCount = oCount = pCount = iCount = 0;
     }
 
     // default constructor
@@ -49,6 +63,7 @@ class vector
       mData = new T[cap]();
       mCap = cap;
       mSize = 0;
+      aCount = oCount = pCount = iCount = 0;
     }
 
     // constructor with initial size
@@ -56,6 +71,7 @@ class vector
       mData = new T[cap]();
       mCap = cap;
       mSize = cap;
+      aCount = oCount = pCount = iCount = 0;
     }
 
     // copy assignment operator using copy-and-swap idiom
@@ -70,7 +86,6 @@ class vector
     }
 
     ~vector() {
-      clear();
       delete [] mData;
     }
 
@@ -112,6 +127,7 @@ class vector
     }
     //----------------- access -----------------
     T& at(int index) {
+      aCount++;
       rangeCheck(index);
       return mData[index];
     }
@@ -122,6 +138,7 @@ class vector
     }
 
     T& operator[](int index) {
+      oCount++;
       return mData[index];
     }
 
@@ -131,6 +148,7 @@ class vector
 
     //----------------- modifier -------------
     void push_back(const T& element) {
+      pCount++;
       insert(end(),element);
     }
 
@@ -139,9 +157,9 @@ class vector
     }
 
     iterator insert(iterator it,const T& element) {
+      iCount++;
       size_t pos = it - begin();
-      if (mSize + 1 > mCap)
-        expand(2 * mCap);
+      ensureCapacity(mSize + 1);
       for(size_t i = mSize;i > pos;i--) {
         mData[i] = mData[i-1];
       }
@@ -161,6 +179,8 @@ class vector
     void clear() {
       mSize = 0;
     }
+
+    bool block_swap(iterator a, iterator b, size_t m);
 
 
     //-------------- extra (unlike STL) ------------------
@@ -190,55 +210,16 @@ class vector
       return -1;
     }
 
-    bool isReverse(const vector<T> &other) const {
-      //write your code only in this function
-      if (mSize == other.size()){
-        for (int i=0; i<mSize; i++){
-            if (mData[i] != other.mData[mSize-i-1]){
-                return false;
-            }
-        }
-        return true;
-      }
-      else {
-        return false;
-      }
+    void check() {
+        std::cout << "at count " << aCount << std::endl;
+        std::cout << "[] count " << oCount << std::endl;
+        std::cout << "pb count " << pCount << std::endl;
+        std::cout << "in count " << iCount << std::endl;
     }
 };
 
-} // end namespace
-
-bool equal(CP::vector<int> &a,CP::vector<int> &b) {
-  if (a.size() != b.size()) return false;
-  for (size_t i = 0;i < a.size();i++) {
-    if (a[i] != b[i]) return false;
-  }
-  return true;
 }
 
-int main() {
-  int n,m;
-  std::cin >> n >> m;
+#endif
 
-  //read input
-  CP::vector<int> a,b;
-  while (n--) {
-    int tmp;
-    std::cin >> tmp;
-    a.push_back(tmp);
-  }
-  while (m--) {
-    int tmp;
-    std::cin >> tmp;
-    b.push_back(tmp);
-  }
 
-  //check
-  CP::vector<int> c;
-  c = b;
-  std::cout << a.isReverse(b) << std::endl;
-  std::cout << equal(c,b) << std::endl;
-  c = a;
-  std::cout << b.isReverse(a) << std::endl;
-  std::cout << equal(c,a) << std::endl;
-}

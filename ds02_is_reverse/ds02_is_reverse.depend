@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1696229150 source:c:\users\film\desktop\grader\ds02_is_reverse\main.cpp
+	<stdexcept>
+	<iostream>
+
