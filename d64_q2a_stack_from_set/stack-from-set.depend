@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1696506402 source:c:\users\film\desktop\grader\d64_q2a_stack_from_set\main.cpp
+	<iostream>
+	<stack>
+	"student.h"
+	<assert.h>
+	<exception>
+	<set>
+	<string>
+	<sstream>
+
+1696511746 c:\users\film\desktop\grader\d64_q2a_stack_from_set\student.h
+	"stack.h"
+
+1696506402 c:\users\film\desktop\grader\d64_q2a_stack_from_set\stack.h
+	<stdexcept>
+	<iostream>
+	<set>
+

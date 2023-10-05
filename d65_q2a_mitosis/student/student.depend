@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1696498819 source:c:\users\film\desktop\grader\d65_q2a_mitosis\student\main.cpp
+	"student.h"
+	<iostream>
+	<vector>
+
+1696505041 c:\users\film\desktop\grader\d65_q2a_mitosis\student\student.h
+	"stack.h"
+
+1696498819 c:\users\film\desktop\grader\d65_q2a_mitosis\student\stack.h
+	<stdexcept>
+	<iostream>
+	<set>
+

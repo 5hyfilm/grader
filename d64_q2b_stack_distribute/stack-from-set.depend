@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1696404122 source:c:\users\film\desktop\grader\d64_q2b_stack_distribute\main.cpp
+	<iostream>
+	<vector>
+	"stack.h"
+	"student.h"
+
+1696404122 c:\users\film\desktop\grader\d64_q2b_stack_distribute\stack.h
+	<stdexcept>
+	<iostream>
+	<vector>
+
+1696489080 c:\users\film\desktop\grader\d64_q2b_stack_distribute\student.h
+

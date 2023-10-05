@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1696519359 source:c:\users\film\desktop\grader\d59_q2_queue_equality\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<stdexcept>
+	<iostream>
+	"queue.h"
+	"student.h"
+	<vector>
+
+1696519359 c:\users\film\desktop\grader\d59_q2_queue_equality\queue.h
+	<stdexcept>
+	<iostream>
+
+1696525668 c:\users\film\desktop\grader\d59_q2_queue_equality\student.h
+

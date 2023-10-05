@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1696489336 source:c:\users\film\desktop\grader\d57_q1_sbv2\test_stack.cpp
+	<iostream>
+	<stack>
+	<assert.h>
+	"stack.h"
+	"student.h"
+
+1696489336 c:\users\film\desktop\grader\d57_q1_sbv2\stack.h
+	<stdexcept>
+	<iostream>
+	<vector>
+
+1696497717 c:\users\film\desktop\grader\d57_q1_sbv2\student.h
+	"stack.h"
+	<iostream>
+
