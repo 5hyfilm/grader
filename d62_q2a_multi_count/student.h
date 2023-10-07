@@ -6,17 +6,18 @@
 template <typename T>
 std::vector<std::pair<T,size_t>> CP::queue<T>::count_multi(std::vector<T> &k) const {
     //write your code here
-    std::map<T, int> m;
-    vector<pair<T, size_t>> ans;
+    std::map<T, size_t> m;
+    std::vector<std::pair<T, size_t>> v;
 
-
-
-    for (auto &x : k){
-        m[x]++;
+    for (int i=0; i<mSize; i++) {
+        m[mData[(i+mFront)%mCap]]++;
     }
 
-    return ans;
+    for (auto &x : k){
+        v.push_back(std::make_pair(x, m[x]));
+    }
 
+    return v;
 }
 
 #endif

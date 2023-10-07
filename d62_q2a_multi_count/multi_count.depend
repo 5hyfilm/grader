@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1696613103 source:c:\users\film\desktop\grader\d62_q2a_multi_count\main.cpp
+	<stdexcept>
+	<iostream>
+	"queue.h"
+	"student.h"
+	<vector>
+	<time.h>
+	<stdlib.h>
+
+1696613103 c:\users\film\desktop\grader\d62_q2a_multi_count\queue.h
+	<stdexcept>
+	<iostream>
+	<vector>
+
+1696659803 c:\users\film\desktop\grader\d62_q2a_multi_count\student.h
+	<map>
+
