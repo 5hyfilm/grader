@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1696677247 source:c:\users\film\desktop\grader\d65_q3b_queue_total_reverse\student\main.cpp
+	"queue.h"
+	"student.h"
+	<iostream>
+
+1696677247 c:\users\film\desktop\grader\d65_q3b_queue_total_reverse\student\queue.h
+	<iostream>
+	<stdexcept>
+
+1696688677 c:\users\film\desktop\grader\d65_q3b_queue_total_reverse\student\student.h
+	"queue.h"
+
