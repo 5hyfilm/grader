@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1696775706 source:c:\users\film\desktop\grader\d65_q2b_split_stack\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	"student.h"
+
+1696777717 c:\users\film\desktop\grader\d65_q2b_split_stack\student.h
+	"stack.h"
+	<algorithm>
+
+1696775706 c:\users\film\desktop\grader\d65_q2b_split_stack\stack.h
+	<stdexcept>
+	<iostream>
+	<set>
+
